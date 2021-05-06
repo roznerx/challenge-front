@@ -1,19 +1,23 @@
-import "./App.css";
-import Dashboard from "./components/dashboard/Dashboard.js";
-import { BrowserRouter as Router, Route, Redirect, Link, Switch } from "react-router-dom";
-import React from "react";
-
-//App Component is the main component in React which acts as a container for all other components
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Switch>
-          <Route path="/admin" component={Dashboard} />
-          <Redirect from="/" to="/admin/Home"></Redirect>
-        </Switch>
-      </Router>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
